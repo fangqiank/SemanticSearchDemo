@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/init-db/">
+    <File Path="01-enable-pgvector.sql" />
+  </Folder>
+  <Project Path="SemanticSearchDemo.Api/SemanticSearchDemo.Api.csproj" />
+  <Project Path="SemanticSearchDemo.AppHost/SemanticSearchDemo.AppHost.csproj" />
+  <Project Path="SemanticSearchDemo.ServiceDefaults/SemanticSearchDemo.ServiceDefaults.csproj" />
+</Solution>

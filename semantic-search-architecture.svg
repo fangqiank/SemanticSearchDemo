@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 920" width="1200" height="920">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tealGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#42b883;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#35495e;stop-opacity:1" />
+    </linearGradient>
+
+    <marker id="arrowSky" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0ea5e9"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a855f7"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#42b883"/>
+    </marker>
+  </defs>
+
+  <style>
+    .flow-line-sky { stroke-dasharray: 8, 4; animation: dash-flow-sky 0.5s linear infinite; }
+    .flow-line-purple { stroke-dasharray: 8, 4; animation: dash-flow-purple 0.5s linear infinite; }
+    .flow-line-orange { stroke-dasharray: 8, 4; animation: dash-flow-orange 0.5s linear infinite; }
+    .flow-line-blue { stroke-dasharray: 8, 4; animation: dash-flow-blue 0.5s linear infinite; }
+    .flow-line-green { stroke-dasharray: 8, 4; animation: dash-flow-green 0.5s linear infinite; }
+    .flow-line-teal { stroke-dasharray: 8, 4; animation: dash-flow-teal 0.5s linear infinite; }
+    @keyframes dash-flow-sky { to { stroke-dashoffset: -12; } }
+    @keyframes dash-flow-purple { to { stroke-dashoffset: -12; } }
+    @keyframes dash-flow-orange { to { stroke-dashoffset: -12; } }
+    @keyframes dash-flow-blue { to { stroke-dashoffset: -12; } }
+    @keyframes dash-flow-green { to { stroke-dashoffset: -12; } }
+    @keyframes dash-flow-teal { to { stroke-dashoffset: -12; } }
+  </style>
+
+  <!-- White background -->
+  <rect width="1200" height="920" fill="#ffffff"/>
+
+  <!-- Grid -->
+  <g opacity="0.12">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1200" height="920" fill="url(#grid)"/>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(600, 40)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b">SemanticSearch 语义搜索架构 / Architecture</text>
+    <text x="0" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#64748b">.NET 10 + Aspire + pgvector + Ollama</text>
+  </g>
+
+  <!-- ===== 1. Client / User (left) ===== -->
+  <g transform="translate(30, 220)">
+    <rect x="0" y="0" width="160" height="160" rx="12" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+    <rect x="0" y="0" width="160" height="35" rx="12" fill="url(#skyGradient)"/>
+    <rect x="0" y="20" width="160" height="15" fill="url(#skyGradient)"/>
+    <text x="80" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Client / 客户端</text>
+
+    <g transform="translate(20, 48)">
+      <rect x="0" y="0" width="120" height="44" rx="6" fill="#ffffff" stroke="#bae6fd" stroke-width="1"/>
+      <text x="60" y="17" text-anchor="middle" font-family="monospace" font-size="10" fill="#0ea5e9">HTTP Client</text>
+      <text x="60" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">curl / Postman / App</text>
+    </g>
+
+    <g transform="translate(20, 102)">
+      <rect x="0" y="0" width="120" height="44" rx="6" fill="#ffffff" stroke="#bae6fd" stroke-width="1"/>
+      <text x="60" y="17" text-anchor="middle" font-family="monospace" font-size="10" fill="#0ea5e9">Scalar API</text>
+      <text x="60" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">API Docs /scalar/v1</text>
+    </g>
+  </g>
+
+  <!-- ===== 2. .NET Aspire AppHost (top-center) ===== -->
+  <g transform="translate(280, 75)">
+    <rect x="0" y="0" width="300" height="100" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <rect x="0" y="0" width="300" height="35" rx="12" fill="url(#greenGradient)"/>
+    <rect x="0" y="20" width="300" height="15" fill="url(#greenGradient)"/>
+    <text x="150" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Aspire AppHost / 编排器</text>
+
+    <g transform="translate(15, 45)">
+      <rect x="0" y="0" width="125" height="40" rx="6" fill="#ffffff" stroke="#dcfce7" stroke-width="1"/>
+      <text x="62" y="16" text-anchor="middle" font-family="monospace" font-size="10" fill="#22c55e">AppHost.cs</text>
+      <text x="62" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Container Orchestrator</text>
+    </g>
+    <g transform="translate(155, 45)">
+      <rect x="0" y="0" width="130" height="40" rx="6" fill="#ffffff" stroke="#dcfce7" stroke-width="1"/>
+      <text x="65" y="16" text-anchor="middle" font-family="monospace" font-size="10" fill="#22c55e">ServiceDefaults</text>
+      <text x="65" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Telemetry + Health</text>
+    </g>
+  </g>
+
+  <!-- ===== 3. API Layer (center) ===== -->
+  <g transform="translate(280, 220)">
+    <rect x="0" y="0" width="300" height="260" rx="12" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+    <rect x="0" y="0" width="300" height="35" rx="12" fill="url(#purpleGradient)"/>
+    <rect x="0" y="20" width="300" height="15" fill="url(#purpleGradient)"/>
+    <text x="150" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Web API / 接口层</text>
+
+    <!-- Program.cs -->
+    <g transform="translate(15, 45)">
+      <rect x="0" y="0" width="270" height="40" rx="6" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="135" y="16" text-anchor="middle" font-family="monospace" font-size="10" fill="#a855f7">Program.cs</text>
+      <text x="135" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Minimal API + DI + Middleware</text>
+    </g>
+
+    <!-- SearchEndpoints -->
+    <g transform="translate(15, 95)">
+      <rect x="0" y="0" width="130" height="70" rx="6" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="65" y="16" text-anchor="middle" font-family="monospace" font-size="10" fill="#a855f7">SearchEndpoints</text>
+      <text x="65" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">/api/search/*</text>
+      <text x="65" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">POST /initialize</text>
+      <text x="65" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">POST /semantic</text>
+    </g>
+
+    <!-- EmbeddingService -->
+    <g transform="translate(155, 95)">
+      <rect x="0" y="0" width="130" height="70" rx="6" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="65" y="16" text-anchor="middle" font-family="monospace" font-size="10" fill="#a855f7">EmbeddingService</text>
+      <text x="65" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Text → Vector</text>
+      <text x="65" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">HttpClient to Ollama</text>
+      <text x="65" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">qwen3-embedding:0.6b</text>
+    </g>
+
+    <!-- SearchService -->
+    <g transform="translate(15, 175)">
+      <rect x="0" y="0" width="270" height="70" rx="6" fill="#ffffff" stroke="#e9d5ff" stroke-width="1"/>
+      <text x="135" y="16" text-anchor="middle" font-family="monospace" font-size="10" fill="#a855f7">SearchService</text>
+      <text x="135" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Dapper + Npgsql + Pgvector</text>
+      <text x="135" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">CRUD + Cosine Similarity Search</text>
+      <text x="135" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">HNSW Index (m=16, ef_construction=200)</text>
+    </g>
+  </g>
+
+  <!-- ===== 4. Ollama (bottom-center) ===== -->
+  <g transform="translate(280, 545)">
+    <rect x="0" y="0" width="300" height="120" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+    <rect x="0" y="0" width="300" height="35" rx="12" fill="url(#orangeGradient)"/>
+    <rect x="0" y="20" width="300" height="15" fill="url(#orangeGradient)"/>
+    <text x="150" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Ollama / 嵌入模型</text>
+
+    <g transform="translate(15, 45)">
+      <rect x="0" y="0" width="130" height="60" rx="6" fill="#ffffff" stroke="#fed7aa" stroke-width="1"/>
+      <text x="65" y="17" text-anchor="middle" font-family="monospace" font-size="10" fill="#f97316">qwen3-embedding</text>
+      <text x="65" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">0.6B Parameters</text>
+      <text x="65" y="47" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">vector(1024)</text>
+    </g>
+    <g transform="translate(155, 45)">
+      <rect x="0" y="0" width="130" height="60" rx="6" fill="#ffffff" stroke="#fed7aa" stroke-width="1"/>
+      <text x="65" y="17" text-anchor="middle" font-family="monospace" font-size="10" fill="#f97316">/api/embeddings</text>
+      <text x="65" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">POST endpoint</text>
+      <text x="65" y="47" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">localhost:11434</text>
+    </g>
+  </g>
+
+  <!-- ===== 5. PostgreSQL (right) ===== -->
+  <g transform="translate(700, 220)">
+    <rect x="0" y="0" width="300" height="260" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="0" y="0" width="300" height="35" rx="12" fill="url(#blueGradient)"/>
+    <rect x="0" y="20" width="300" height="15" fill="url(#blueGradient)"/>
+    <text x="150" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">PostgreSQL + pgvector / 数据库</text>
+
+    <g transform="translate(15, 45)">
+      <rect x="0" y="0" width="270" height="55" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="135" y="16" text-anchor="middle" font-family="monospace" font-size="10" fill="#3b82f6">pgvector Extension</text>
+      <text x="135" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">CREATE EXTENSION vector</text>
+      <text x="135" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Cosine Distance &lt;=&gt; Operator</text>
+    </g>
+
+    <g transform="translate(15, 110)">
+      <rect x="0" y="0" width="130" height="70" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="65" y="16" text-anchor="middle" font-family="monospace" font-size="10" fill="#3b82f6">blog_articles</text>
+      <text x="65" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Table / 数据表</text>
+      <text x="65" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">id, url, title, content</text>
+      <text x="65" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">embedding vector(1024)</text>
+    </g>
+
+    <g transform="translate(155, 110)">
+      <rect x="0" y="0" width="130" height="70" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="65" y="16" text-anchor="middle" font-family="monospace" font-size="10" fill="#3b82f6">HNSW Index</text>
+      <text x="65" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Approximate NN</text>
+      <text x="65" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">m = 16</text>
+      <text x="65" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">ef_construction = 200</text>
+    </g>
+
+    <g transform="translate(15, 192)">
+      <rect x="0" y="0" width="270" height="55" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="135" y="16" text-anchor="middle" font-family="monospace" font-size="10" fill="#3b82f6">Docker Container</text>
+      <text x="135" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">pgvector/pgvector:pg17</text>
+      <text x="135" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Persistent Volume + Aspire Managed</text>
+    </g>
+  </g>
+
+  <!-- ===== 6. Data Model (bottom-right) ===== -->
+  <g transform="translate(700, 545)">
+    <rect x="0" y="0" width="300" height="120" rx="12" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+    <rect x="0" y="0" width="300" height="35" rx="12" fill="url(#tealGradient)"/>
+    <rect x="0" y="20" width="300" height="15" fill="url(#tealGradient)"/>
+    <text x="150" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Data Models / 数据模型</text>
+
+    <g transform="translate(15, 45)">
+      <rect x="0" y="0" width="85" height="60" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="42" y="17" text-anchor="middle" font-family="monospace" font-size="9" fill="#42b883">BlogArticle</text>
+      <text x="42" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#64748b">id, url, title</text>
+      <text x="42" y="47" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">embedding</text>
+    </g>
+    <g transform="translate(110, 45)">
+      <rect x="0" y="0" width="85" height="60" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="42" y="17" text-anchor="middle" font-family="monospace" font-size="9" fill="#42b883">SearchReq</text>
+      <text x="42" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#64748b">query, topK</text>
+      <text x="42" y="47" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">minSimilarity</text>
+    </g>
+    <g transform="translate(205, 45)">
+      <rect x="0" y="0" width="80" height="60" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="40" y="17" text-anchor="middle" font-family="monospace" font-size="9" fill="#42b883">SearchRes</text>
+      <text x="40" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#64748b">article fields</text>
+      <text x="40" y="47" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">similarity</text>
+    </g>
+  </g>
+
+  <!-- ===== FLOW LINES ===== -->
+
+  <!-- Client → API -->
+  <path d="M 190 300 L 278 300" stroke="#bae6fd" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 190 300 L 278 300" class="flow-line-sky" stroke="#0ea5e9" stroke-width="3" fill="none" marker-end="url(#arrowSky)" stroke-linecap="round"/>
+  <text x="234" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0ea5e9">HTTP /api/search</text>
+
+  <!-- Aspire → API (manages) -->
+  <path d="M 430 175 L 430 218" stroke="#dcfce7" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 430 175 L 430 218" class="flow-line-green" stroke="#22c55e" stroke-width="3" fill="none" marker-end="url(#arrowGreen)" stroke-linecap="round"/>
+  <text x="456" y="200" text-anchor="start" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#22c55e">Manage</text>
+
+  <!-- API EmbeddingService → Ollama -->
+  <path d="M 430 480 L 430 543" stroke="#fed7aa" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 430 480 L 430 543" class="flow-line-orange" stroke="#f97316" stroke-width="3" fill="none" marker-end="url(#arrowOrange)" stroke-linecap="round"/>
+  <text x="460" y="510" text-anchor="start" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#f97316">Text → Embedding</text>
+
+  <!-- Ollama → API (response) -->
+  <path d="M 355 543 L 355 480" stroke="#fed7aa" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 355 543 L 355 480" class="flow-line-orange" stroke="#f97316" stroke-width="3" fill="none" marker-end="url(#arrowOrange)" stroke-linecap="round"/>
+  <text x="320" y="515" text-anchor="end" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#f97316">float[1024]</text>
+
+  <!-- API → PostgreSQL -->
+  <path d="M 580 350 L 698 350" stroke="#bfdbfe" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 580 350 L 698 350" class="flow-line-blue" stroke="#3b82f6" stroke-width="3" fill="none" marker-end="url(#arrowBlue)" stroke-linecap="round"/>
+  <text x="639" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#3b82f6">Dapper + Npgsql</text>
+
+  <!-- PostgreSQL → API (results) -->
+  <path d="M 698 380 L 580 380" stroke="#bfdbfe" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 698 380 L 580 380" class="flow-line-blue" stroke="#3b82f6" stroke-width="3" fill="none" marker-end="url(#arrowBlue)" stroke-linecap="round"/>
+  <text x="639" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#3b82f6">Query Results</text>
+
+  <!-- API → Client (response) -->
+  <path d="M 278 340 L 190 340" stroke="#bae6fd" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 278 340 L 190 340" class="flow-line-sky" stroke="#0ea5e9" stroke-width="3" fill="none" marker-end="url(#arrowSky)" stroke-linecap="round"/>
+  <text x="234" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0ea5e9">JSON Response</text>
+
+  <!-- Aspire → PostgreSQL (provisions) -->
+  <path d="M 580 125 L 700 230" stroke="#dcfce7" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 580 125 L 700 230" class="flow-line-green" stroke="#22c55e" stroke-width="3" fill="none" marker-end="url(#arrowGreen)" stroke-linecap="round"/>
+  <text x="660" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#22c55e">Provision</text>
+
+  <!-- Aspire → Ollama (manages) -->
+  <path d="M 330 175 L 330 543" stroke="#fed7aa" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="4,4" opacity="0.4"/>
+  <path d="M 330 175 L 330 543" class="flow-line-green" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arrowGreen)" stroke-linecap="round" stroke-dasharray="4,4"/>
+
+  <!-- ===== Process Description ===== -->
+  <g transform="translate(50, 720)">
+    <rect x="0" y="0" width="580" height="165" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="290" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Data Flow / 数据流程</text>
+
+    <g transform="translate(24, 48)">
+      <circle cx="8" cy="8" r="6" fill="#0ea5e9"/>
+      <text x="25" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">1. Client sends search query to /api/search/semantic</text>
+    </g>
+    <g transform="translate(24, 72)">
+      <circle cx="8" cy="8" r="6" fill="#f97316"/>
+      <text x="25" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">2. EmbeddingService calls Ollama → generates vector(1024)</text>
+    </g>
+    <g transform="translate(24, 96)">
+      <circle cx="8" cy="8" r="6" fill="#3b82f6"/>
+      <text x="25" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">3. SearchService queries PostgreSQL with cosine distance (&lt;=&gt;)</text>
+    </g>
+    <g transform="translate(24, 120)">
+      <circle cx="8" cy="8" r="6" fill="#a855f7"/>
+      <text x="25" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">4. HNSW index accelerates approximate nearest neighbor search</text>
+    </g>
+    <g transform="translate(24, 146)">
+      <circle cx="8" cy="8" r="6" fill="#22c55e"/>
+      <text x="25" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">5. Aspire orchestrates PostgreSQL + Ollama containers with health checks</text>
+    </g>
+  </g>
+
+  <!-- ===== Legend ===== -->
+  <g transform="translate(700, 720)">
+    <rect x="0" y="0" width="460" height="165" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="230" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#64748b">LEGEND / 图例</text>
+
+    <rect x="20" y="46" width="30" height="15" rx="3" fill="#0ea5e9"/>
+    <text x="58" y="58" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Client / 客户端</text>
+
+    <rect x="160" y="46" width="30" height="15" rx="3" fill="#a855f7"/>
+    <text x="198" y="58" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">API / 接口</text>
+
+    <rect x="280" y="46" width="30" height="15" rx="3" fill="#f97316"/>
+    <text x="318" y="58" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Embedding / 嵌入</text>
+
+    <rect x="20" y="72" width="30" height="15" rx="3" fill="#3b82f6"/>
+    <text x="58" y="84" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Database / 数据库</text>
+
+    <rect x="160" y="72" width="30" height="15" rx="3" fill="#22c55e"/>
+    <text x="198" y="84" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Orchestration / 编排</text>
+
+    <rect x="280" y="72" width="30" height="15" rx="3" fill="#42b883"/>
+    <text x="318" y="84" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Models / 模型</text>
+
+    <!-- Animated line legend -->
+    <line x1="20" y1="106" x2="60" y2="106" stroke="#94a3b8" stroke-width="3" stroke-dasharray="8,4"/>
+    <text x="70" y="110" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Animated flow / 数据流动</text>
+
+    <line x1="230" y1="106" x2="270" y2="106" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="280" y="110" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Managed by Aspire / Aspire 管理</text>
+
+    <text x="230" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">.NET 10 | Aspire 13.3 | PostgreSQL 17 + pgvector | Ollama</text>
+  </g>
+
+</svg>

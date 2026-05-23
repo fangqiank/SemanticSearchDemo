@@ -1,0 +1,22 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+## IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+## NuGet
+*.nupkg
+packages/
+
+## Environment / Secrets
+appsettings.Development.json
+
+## Claude
+CLAUDE.md
+.claude/
