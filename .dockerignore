@@ -1,0 +1,16 @@
+bin/
+obj/
+.vs/
+.vscode/
+*.user
+*.suo
+CLAUDE.md
+.claude/
+embedding-service/
+source-code-pgvector-intro/
+semantic-search-architecture.svg
+README.md
+.git/
+.gitignore
+docker-compose.yml
+appsettings.Development.json

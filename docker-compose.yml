@@ -1,0 +1,55 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-semanticsearch}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  embedding:
+    build:
+      context: ./embedding-service
+      dockerfile: Dockerfile
+    environment:
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-BAAI/bge-m3}
+      EMBEDDING_DIMENSIONS: ${EMBEDDING_DIMENSIONS:-1024}
+    volumes:
+      - hf-cache:/root/.cache/huggingface
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+
+  api:
+    build:
+      context: .
+      dockerfile: SemanticSearchDemo.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__Postgres: Host=postgres;Port=5432;Username=postgres;Password=${POSTGRES_PASSWORD:-postgres};Database=${POSTGRES_DB:-semanticsearch}
+      Ollama__BaseUrl: http://embedding:8000
+      Ollama__ModelName: ${EMBEDDING_MODEL:-BAAI/bge-m3}
+      Ollama__Dimensions: ${EMBEDDING_DIMENSIONS:-1024}
+    ports:
+      - "5006:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      embedding:
+        condition: service_healthy
+
+volumes:
+  pgdata:
+  hf-cache:

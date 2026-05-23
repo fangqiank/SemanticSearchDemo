@@ -36,7 +36,10 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
-app.UseHttpsRedirection();
+if (app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
 
 app.MapSearchEndpoints();
 
